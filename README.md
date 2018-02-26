@@ -7,6 +7,8 @@
     * [使用开发服务器](#使用开发服务器)
 * [项目的基本结构](#项目的基本结构)
 * [视图和网址](#视图和网址)
+    * [基本的网址](#基本的网址)
+    * [含参数的网址](#含参数的网址)
 
 ## 相关指令
 常用的指令有，创建项目，新建app，创建数据库表，更改数据库表字段，使用开发服务器，清空数据库，创建超级管理员，django项目环境终端
@@ -75,5 +77,52 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 ```
+```
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from django.http import HttpResponse
+from django.shortcuts import render
+
+# Create your views here.
+
+
+def index(request):
+    return HttpResponse(u"django默认显示页面")
+```
 ![添加访问网址](imgs/img_002.png)  
+![添加访问网址](imgs/img_003.png)  
 这个是最简单的配置网址，没有参数，全部通配  
+
+#### 含参数的网址
+```
+from django.conf.urls import url
+from django.contrib import admin
+from grammar import views as grammar_views
+
+urlpatterns = [
+    url(r'^intro$', grammar_views.intro, name='intro'),
+    url(r'^$', grammar_views.index),
+    url(r'^admin/', admin.site.urls),
+]
+```
+```
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from django.http import HttpResponse
+from django.shortcuts import render
+
+# Create your views here.
+
+
+def index(request):
+    return HttpResponse(u"django默认显示页面")
+
+
+def intro(request):
+    name = request.GET.get('name', 'python')
+    day = request.GET.get('day', '10')
+    return HttpResponse("学习" + name + "已经" + day + "天")
+```
+![添加访问网址](imgs/img_004.png)  
+![添加访问网址](imgs/img_005.png)  
+上面的需要传参数name和day

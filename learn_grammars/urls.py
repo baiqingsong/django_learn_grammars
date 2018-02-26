@@ -18,6 +18,7 @@ from django.contrib import admin
 from grammar import views as grammar_views
 
 urlpatterns = [
+    url(r'^intro$', grammar_views.intro, name='intro'),
     url(r'^$', grammar_views.index),
     url(r'^admin/', admin.site.urls),
 ]
