@@ -14,3 +14,12 @@ def intro(request):
     name = request.GET.get('name', 'python')
     day = request.GET.get('day', '10')
     return HttpResponse("学习" + name + "已经" + day + "天")
+
+
+def simple(request):
+    return render(request, 'simple.html')
+
+
+def template_more1(request):
+    string = "传递字符串参数到模板"
+    return render(request, 'template_more1.html', {'string': string})

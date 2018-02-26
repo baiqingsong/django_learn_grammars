@@ -9,6 +9,10 @@
 * [视图和网址](#视图和网址)
     * [基本的网址](#基本的网址)
     * [含参数的网址](#含参数的网址)
+* [模板](#模板)
+    * [模板的更多使用](#模板的更多使用)
+        * [字符串参数传递](#字符串参数传递)
+* [相关地址](#相关地址)
 
 ## 相关指令
 常用的指令有，创建项目，新建app，创建数据库表，更改数据库表字段，使用开发服务器，清空数据库，创建超级管理员，django项目环境终端
@@ -125,4 +129,49 @@ def intro(request):
 ```
 ![添加访问网址](imgs/img_004.png)  
 ![添加访问网址](imgs/img_005.png)  
+其中name='intro'相当于别名  
 上面的需要传参数name和day
+
+## 模板
+views.py中需要改动
+```
+def simple(request):
+    return render(request, 'simple.html')
+```
+在app下添加templates文件夹，然后再下面添加html文件
+urls.py中添加地址
+```
+url(r'^simple/$', grammar_views.simple, name='simple'),
+```
+![添加访问网址](imgs/img_006.png)  
+![添加访问网址](imgs/img_007.png)  
+
+#### 模板的更多使用
+模板中可以进行下面的相关使用：
+1. 列表，字典，类的使用
+2. 循环：迭代显示列表，字典等内容
+3. 条件判断：判断是否显示该内容，比如判断手机访问，还是电脑访问，给出不一样的代码
+4. 标签：for，if等功能
+5. 过滤器：管道符号后面的功能，比如{{var|length}},求变量长度length就是一个过滤器
+
+###### 字符串参数传递
+views.py中需要改动
+```
+def template_more1(request):
+    string = "传递字符串参数到模板"
+    return render(request, 'template_more1.html', {'string': string})
+```
+urls.py中需要改动
+```
+url(r'^template_more1/$', grammar_views.template_more1, name='template_more1'),
+```
+template_more1.html中接收参数
+```
+{{string}}
+```
+![添加访问网址](imgs/img_008.png)  
+![添加访问网址](imgs/img_009.png)
+![添加访问网址](imgs/img_010.png)
+
+## 相关地址
+[https://code.ziqiangxuetang.com/django/django-tutorial.html](https://code.ziqiangxuetang.com/django/django-tutorial.html)
