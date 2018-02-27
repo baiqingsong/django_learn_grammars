@@ -19,6 +19,7 @@
         * [模板中其他逻辑符号](#模板中其他逻辑符号)
         * [模板中获取当前地址用户等](#模板中获取当前地址用户等)
 * [表单](#表单)
+* [配置文件](#配置文件)
 * [相关地址](#相关地址)
 
 ## 相关指令
@@ -369,6 +370,28 @@ html中内容添加
 <input type="submit" value="提交">
 </form>
 ```
+
+## 配置文件
+```
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+```
+这里用到了python中一个神奇的变量 __file__ 这个变量可以获取到当前文件（包含这个代码的文件）的路径。os.path.dirname(__file__) 得到文件所在目录，再来一个os.path.dirname()就是目录的上一级，BASE_DIR 即为 项目 所在目录。我们在后面的与目录有关的变量都用它，这样使得移植性更强。
+
+```
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+TEMPLATE_DEBUG = True
+```
+DEBUG＝True 时，如果出现 bug 便于我们看见问题所在，但是部署时最好不要让用户看见bug的详情，可能一些不怀好心的人攻击网站，造成不必要的麻烦。
+
+```
+ALLOWED_HOSTS = []
+```
+ALLOWED_HOSTS 允许你设置哪些域名可以访问，即使在 Apache 或 Nginx 等中绑定了，这里不允许的话，也是不能访问的。
+当 DEBUG=False 时，这个为必填项，如果不想输入，可以用 ALLOW_HOSTS = ['*'] 来允许所有的。
+
 
 ## 相关地址
 [https://code.ziqiangxuetang.com/django/django-tutorial.html](https://code.ziqiangxuetang.com/django/django-tutorial.html)
