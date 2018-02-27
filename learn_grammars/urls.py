@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^template_more4/$', grammar_views.template_more4, name='template_more4'),
     url(r'^template_more5/$', grammar_views.template_more5, name='template_more5'),
     url(r'^add/(\d+)/(\d+)/$', grammar_views.add, name='add'),
+    url(r'^forms/$', grammar_views.form_template, name='form'),
     url(r'^$', grammar_views.index),
     url(r'^admin/', admin.site.urls),
 ]

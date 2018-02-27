@@ -18,6 +18,7 @@
         * [网址的显示](#网址的显示)
         * [模板中其他逻辑符号](#模板中其他逻辑符号)
         * [模板中获取当前地址用户等](#模板中获取当前地址用户等)
+* [表单](#表单)
 * [相关地址](#相关地址)
 
 ## 相关指令
@@ -327,6 +328,46 @@ html中添加
 获取当前get参数：
 ```
 {{ request.GET.urlencode }}
+```
+
+## 表单
+创建表单类forms.py
+```
+from django import forms
+
+
+class AddForm(forms.Form):
+    a = forms.IntegerField()
+    b = forms.IntegerField()
+
+```
+views.py中添加表单的添加和提交
+```
+def form_template(request):
+    if request.method == 'POST':  # 当提交表单时
+
+        form = AddForm(request.POST)  # form 包含提交的数据
+
+        if form.is_valid():  # 如果提交的数据合法
+            a = form.cleaned_data['a']
+            b = form.cleaned_data['b']
+            return HttpResponse(str(int(a) + int(b)))
+
+    else:  # 当正常访问时
+        form = AddForm()
+    return render(request, 'form_template.html', {'form': form})
+```
+路径添加urls.py
+```
+    url(r'^forms/$', grammar_views.form_template, name='form'),
+```
+html中内容添加
+```
+<form method='post'>
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="提交">
+</form>
 ```
 
 ## 相关地址
