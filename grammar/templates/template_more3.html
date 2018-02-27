@@ -11,5 +11,15 @@
     分类：{{dict.category}}
     <br/>
     语言：{{dict.language}}
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    {% for key, value in dict.items %}
+        字典的key是：{{key}}<br/>
+        字段的value是：{{value}}<br/>
+    {% endfor %}
 </body>
 </html>

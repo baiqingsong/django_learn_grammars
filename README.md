@@ -221,6 +221,13 @@ html中需要接收字典，显示数据
     <br/>
     语言：{{dict.language}}
 ```
+或者
+```
+    {% for key, value in dict.items %}
+        字典的key是：{{key}}<br/>
+        字段的value是：{{value}}<br/>
+    {% endfor %}
+```
 ![添加访问网址](imgs/img_014.png)  
 ![添加访问网址](imgs/img_015.png)  
 ![添加访问网址](imgs/img_016.png)  
