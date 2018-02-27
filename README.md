@@ -200,10 +200,30 @@ html中需要接收数组，显示数组
     </ul>
 ```
 ![添加访问网址](imgs/img_011.png)  
-![添加访问网址](imgs/img_012.png)
-![添加访问网址](imgs/img_013.png)
+![添加访问网址](imgs/img_012.png)  
+![添加访问网址](imgs/img_013.png)  
+简单总结一下：一般的变量之类的用 {{ }}（变量），功能类的，比如循环，条件判断是用 {%  %}（标签）
 
 ###### 字典显示
+views.py总需要传递字典
+```
+def template_more3(request):
+    dict = {'category': '语言类', 'language': 'python'}
+    return render(request, 'template_more3.html', {'dict': dict})
+```
+urls.py中需要添加网址
+```
+    url(r'^template_more3/$', grammar_views.template_more3, name='template_more3'),
+```
+html中需要接收字典，显示数据
+```
+    分类：{{dict.category}}
+    <br/>
+    语言：{{dict.language}}
+```
+![添加访问网址](imgs/img_014.png)  
+![添加访问网址](imgs/img_015.png)  
+![添加访问网址](imgs/img_016.png)  
 
 ###### if语句
 

@@ -28,3 +28,8 @@ def template_more1(request):
 def template_more2(request):
     languages = ['php', 'java', 'python']
     return render(request, 'template_more2.html', {'languages': languages})
+
+
+def template_more3(request):
+    dict = {'category': '语言类', 'language': 'python'}
+    return render(request, 'template_more3.html', {'dict': dict})
