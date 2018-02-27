@@ -304,8 +304,30 @@ html中添加
 ![添加访问网址](imgs/img_023.png)  
 
 ###### 模板中其他逻辑符号
+包含的符号有`==`,`!=`,`>=`,`<=`,`>`,`<`比较符号前后必须有至少一个空格  
+还包括`and`,`or`,`not`,`in`,`not in`
 
 ###### 模板中获取当前地址用户等
+获取当前用户：
+```
+{{ request.user }}
+```
+如果登录就显示内容，如果没有登录提示登录：
+```
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}，您好！
+{% else %}
+    请登陆，这里放登陆链接
+{% endif %}
+```
+获取当前网址：
+```
+{{ request.path }}
+```
+获取当前get参数：
+```
+{{ request.GET.urlencode }}
+```
 
 ## 相关地址
 [https://code.ziqiangxuetang.com/django/django-tutorial.html](https://code.ziqiangxuetang.com/django/django-tutorial.html)
