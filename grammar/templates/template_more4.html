@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if语句的模板</title>
+</head>
+<body>
+    <ul>
+        {% for language in languages %}
+        {% if 'python' == language %}
+        当前选择的语言是python<br/>
+        {% else %}
+        {{language}}<br/>
+        {% endif %}
+
+        {% empty %}
+        当前列表为空
+        {% endfor %}
+    </ul>
+</body>
+</html>

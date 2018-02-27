@@ -23,6 +23,9 @@ urlpatterns = [
     url(r'^template_more1/$', grammar_views.template_more1, name='template_more1'),
     url(r'^template_more2/$', grammar_views.template_more2, name='template_more2'),
     url(r'^template_more3/$', grammar_views.template_more3, name='template_more3'),
+    url(r'^template_more4/$', grammar_views.template_more4, name='template_more4'),
+    url(r'^template_more5/$', grammar_views.template_more5, name='template_more5'),
+    url(r'^add/(\d+)/(\d+)/$', grammar_views.add, name='add'),
     url(r'^$', grammar_views.index),
     url(r'^admin/', admin.site.urls),
 ]

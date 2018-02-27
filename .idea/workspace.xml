@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f766c30a-a1eb-4dd3-bc16-844d297b3a68" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_018.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_019.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_020.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_021.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_022.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgs/img_023.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grammar/templates/template_more4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grammar/templates/template_more5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grammar/views.py" afterPath="$PROJECT_DIR$/grammar/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learn_grammars/urls.py" afterPath="$PROJECT_DIR$/learn_grammars/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="377">
-                <caret line="233" column="22" lean-forward="false" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+              <first_editor relative-caret-position="567">
+                <caret line="303" column="22" lean-forward="false" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -26,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template_more3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar/templates/template_more3.html">
+      <file leaf-file-name="template_more5.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar/templates/template_more5.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="266">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -39,8 +50,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/learn_grammars/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            <state relative-caret-position="380">
+              <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding>
                 <element signature="e#648#680#0" expanded="true" />
               </folding>
@@ -51,8 +62,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grammar/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="399">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -73,9 +84,12 @@
         <option value="$PROJECT_DIR$/grammar/templates/template_more01.html" />
         <option value="$PROJECT_DIR$/grammar/templates/template_more1.html" />
         <option value="$PROJECT_DIR$/grammar/templates/template_more2.html" />
-        <option value="$PROJECT_DIR$/learn_grammars/urls.py" />
-        <option value="$PROJECT_DIR$/grammar/views.py" />
         <option value="$PROJECT_DIR$/grammar/templates/template_more3.html" />
+        <option value="$PROJECT_DIR$/grammar/templates/template_more4.html" />
+        <option value="$PROJECT_DIR$/grammar/views.py" />
+        <option value="$PROJECT_DIR$/learn_grammars/urls.py" />
+        <option value="$PROJECT_DIR$/grammar/templates/template_more_5.html" />
+        <option value="$PROJECT_DIR$/grammar/templates/template_more5.html" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -300,26 +314,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learn_grammars/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#648#680#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grammar/templates/template_more3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -328,11 +322,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imgs/img_020.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/templates/template_more4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learn_grammars/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="e#648#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/templates/template_more5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="377">
-            <caret line="233" column="22" lean-forward="false" selection-start-line="233" selection-start-column="22" selection-end-line="233" selection-end-column="22" />
+          <first_editor relative-caret-position="567">
+            <caret line="303" column="22" lean-forward="false" selection-start-line="303" selection-start-column="22" selection-end-line="303" selection-end-column="22" />
             <folding />
           </first_editor>
           <second_editor />

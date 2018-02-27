@@ -204,6 +204,18 @@ html中需要接收数组，显示数组
 ![添加访问网址](imgs/img_013.png)  
 简单总结一下：一般的变量之类的用 {{ }}（变量），功能类的，比如循环，条件判断是用 {%  %}（标签）
 
+for循环中有一下的操作：
+1. forloop.counter          索引从1开始算
+2. forloop.counter0         索引从0开始算
+3. forloop.revcounter       索引从最大长度到1
+4. forloop.revcounter0      索引从最大长度到0
+5. forloop.first            当遍历的元素为第一项的时候为真
+6. forloop.last             当遍历的元素为最后一项的时候为真
+7. forloop.parentloop       用在for循环嵌套中，获取上一层for循环的loop
+
+for循环需要endfor结尾  
+for 循环中列表为空是可以通过empty来判断
+
 ###### 字典显示
 views.py总需要传递字典
 ```
@@ -234,8 +246,62 @@ html中需要接收字典，显示数据
 ![添加访问网址](imgs/img_017.png)  
 
 ###### if语句
+views.py中添加
+```
+def template_more4(request):
+    languages = ['php', 'java', 'python', 'django']
+    return render(request, 'template_more4.html', {'languages': languages})
+```
+urls.py中添加
+```
+    url(r'^template_more4/$', grammar_views.template_more4, name='template_more4'),
+```
+html中判断参数显示数据 
+```
+    <ul>
+        {% for language in languages %}
+        {% if 'python' == language %}
+        当前选择的语言是python<br/>
+        {% else %}
+        {{language}}<br/>
+        {% endif %}
+
+        {% empty %}
+        当前列表为空
+        {% endfor %}
+    </ul>
+```
+![添加访问网址](imgs/img_018.png)  
+![添加访问网址](imgs/img_019.png)  
+![添加访问网址](imgs/img_020.png)  
+if语句包括if，elif，else  
+if语句需要endif结尾  
 
 ###### 网址的显示
+views.py中添加
+```
+def template_more5(request):
+    return render(request, 'template_more5.html')
+
+
+def add(request, a, b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
+```
+urls.py中添加
+```
+    url(r'^template_more5/$', grammar_views.template_more5, name='template_more5'),
+    url(r'^add/(\d+)/(\d+)/$', grammar_views.add, name='add'),
+```
+html中添加
+```
+<form action="{% url 'add' 40 5 %}" method="get">
+    <button type="submit">跳转</button>
+</form>
+```
+![添加访问网址](imgs/img_021.png)  
+![添加访问网址](imgs/img_022.png)  
+![添加访问网址](imgs/img_023.png)  
 
 ###### 模板中其他逻辑符号
 

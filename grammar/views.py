@@ -33,3 +33,17 @@ def template_more2(request):
 def template_more3(request):
     dict = {'category': '语言类', 'language': 'python'}
     return render(request, 'template_more3.html', {'dict': dict})
+
+
+def template_more4(request):
+    languages = ['php', 'java', 'python', 'django']
+    return render(request, 'template_more4.html', {'languages': languages})
+
+
+def template_more5(request):
+    return render(request, 'template_more5.html')
+
+
+def add(request, a, b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
