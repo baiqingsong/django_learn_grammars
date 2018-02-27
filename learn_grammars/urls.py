@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^intro/$', grammar_views.intro, name='intro'),
     url(r'^simple/$', grammar_views.simple, name='simple'),
     url(r'^template_more1/$', grammar_views.template_more1, name='template_more1'),
+    url(r'^template_more2/$', grammar_views.template_more2, name='template_more2'),
     url(r'^$', grammar_views.index),
     url(r'^admin/', admin.site.urls),
 ]

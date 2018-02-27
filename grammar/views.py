@@ -23,3 +23,8 @@ def simple(request):
 def template_more1(request):
     string = "传递字符串参数到模板"
     return render(request, 'template_more1.html', {'string': string})
+
+
+def template_more2(request):
+    languages = ['php', 'java', 'python']
+    return render(request, 'template_more2.html', {'languages': languages})

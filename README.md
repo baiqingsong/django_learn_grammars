@@ -12,6 +12,12 @@
 * [模板](#模板)
     * [模板的更多使用](#模板的更多使用)
         * [字符串参数传递](#字符串参数传递)
+        * [for循环](#for循环)
+        * [字典显示](#字典显示)
+        * [if语句](#if语句)
+        * [网址的显示](#网址的显示)
+        * [模板中其他逻辑符号](#模板中其他逻辑符号)
+        * [模板中获取当前地址用户等](#模板中获取当前地址用户等)
 * [相关地址](#相关地址)
 
 ## 相关指令
@@ -172,6 +178,40 @@ template_more1.html中接收参数
 ![添加访问网址](imgs/img_008.png)  
 ![添加访问网址](imgs/img_009.png)
 ![添加访问网址](imgs/img_010.png)
+
+###### for循环
+views.py中需要传递数组
+```
+def template_more2(request):
+    languages = ['php', 'java', 'python']
+    return render(request, 'template_more2.html', {'languages': languages})
+```
+urls.py中需要添加网址
+```
+    url(r'^template_more2/$', grammar_views.template_more2, name='template_more2'),
+```
+html中需要接收数组，显示数组
+```
+    <ul>
+    语言包括:
+    {% for language in languages %}
+    <li>{{language}}</li></br>
+    {% endfor %}
+    </ul>
+```
+![添加访问网址](imgs/img_011.png)  
+![添加访问网址](imgs/img_012.png)
+![添加访问网址](imgs/img_013.png)
+
+###### 字典显示
+
+###### if语句
+
+###### 网址的显示
+
+###### 模板中其他逻辑符号
+
+###### 模板中获取当前地址用户等
 
 ## 相关地址
 [https://code.ziqiangxuetang.com/django/django-tutorial.html](https://code.ziqiangxuetang.com/django/django-tutorial.html)
