@@ -5,6 +5,7 @@
     * [app创建](#app创建)
     * [创建和更新数据库](#创建和更新数据库)
     * [使用开发服务器](#使用开发服务器)
+    * [创建超级用户](#创建超级用户)
 * [项目的基本结构](#项目的基本结构)
 * [视图和网址](#视图和网址)
     * [基本的网址](#基本的网址)
@@ -53,6 +54,17 @@ python manage.py runserver 8001
 默认端口号时8000  
 如果端口号被占用了，可以使用kill关闭和lsof查询
 
+#### 创建超级用户
+如果需要登录后台操作数据库，需要创建超级用户进行管理
+```
+python manage.py createsuperuser
+```
+按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填
+```
+python manage.py changepassword username
+```
+修改 用户密码可以用：
+
 ## 项目的基本结构
 创建项目后，会自动形成一个和项目名相同的文件夹。文件夹下的文件有：
 _init_.py    python包目录必须文件，无需理会
@@ -75,7 +87,7 @@ INSTALLED_APPS = [
 ]
 ```
 ![添加app](imgs/img_001.png)  
-新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件) 
+新建的 app 如果不加到 INSTALL_APPS 中的话, django 就不能自动找到app中的模板文件(app-name/templates/下的文件)和静态文件(app-name/static/中的文件)  
 
 ## 视图和网址
 需要在urls.py中添加访问路径和访问对应的页面
